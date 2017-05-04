@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Library - QR Music App
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="royal">
+        <ion-icon name="settings"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list class="details-list">
+      <ion-list-header>
+        {{ list.desc }}
+      </ion-list-header>
+      <ion-item-sliding>
+        <button ion-item (click)="openDetailPage('open: detail-title-1')" icon-left  color="light">
+          detail-title
+        </button>
+        <ion-item-options side="right">
+          <button ion-button (click)="deleteDetail('delete: detail-title-1')" icon-left color="danger">
+            <ion-icon name="trash" item-left></ion-icon>
+          </button>
+        </ion-item-options>
+      </ion-item-sliding>
+        <ion-item-sliding>
+          <button ion-item (click)="openDetailPage('open: detail-title-2')" icon-left  color="light">
+            detail-title 2
+          </button>
+          <ion-item-options side="right">
+            <button ion-button (click)="deleteDetail('delete: detail-title-2')" icon-left color="danger">
+              <ion-icon name="trash" item-left></ion-icon>
+            </button>
+          </ion-item-options>
+        </ion-item-sliding>
+          <ion-item-sliding>
+            <button ion-item (click)="openDetailPage('open: detail-title-3')" icon-left  color="light">
+              detail-title 3
+            </button>
+            <ion-item-options side="right">
+              <button ion-button (click)="deleteDetail('delete: detail-title-3')" icon-left color="danger">
+                <ion-icon name="trash" item-left></ion-icon>
+              </button>
+            </ion-item-options>
+          </ion-item-sliding>
+      <!-- <ion-item-sliding>
+        <button ion-item *ngFor="let detail of details" (click)="deleteItem(detail.title)" icon-left>
+          <ion-icon [name]="detail.icon" item-left></ion-icon>
+          {{ detail.title }}
+        </button>
+        <ion-item-options side="left">
+          <button ion-item (click)="deleteItem(detail.title)" icon-left>
+            <span class="button-inner" style="background-color: red;">
+              <ion-icon [name]="trash" item-left></ion-icon>
+              Delete
+            </span>
+          </button>
+        </ion-item-options>
+      </ion-item-sliding> -->
+    </ion-list>
+</ion-content>

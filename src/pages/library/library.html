@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Library - QR Music App
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="royal">
+        <ion-icon name="settings"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <button ion-item *ngFor="let list of lists" (click)="openLibraryPage(list.nav)" icon-left color="light">
+      <ion-icon [name]="list.icon" item-left></ion-icon>
+      {{ list.title }}
+    </button>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,33 @@
+page-contact {
+
+}
+page-scan {
+  .Scan{
+    background: #1b1b1b;
+    color: #c7932b;
+  }
+
+  .Scan-button {
+    color: #ffffff;
+    background-color:#00a4da;
+  }
+}
+page-scan-result {
+  .Scan-result{
+    background: green;
+  }
+
+  .Scan-resultUser{
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .Scan-resultImage{
+    border-radius: 100px;
+  }
+
+  .Scan-resultImage{
+    display: flex;
+    justify-content: center;
+  }
+}

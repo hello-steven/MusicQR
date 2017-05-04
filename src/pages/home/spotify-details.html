@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Home - QR Music App
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="royal">
+        <ion-icon name="settings"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item ion-item *ngFor="let spotify_list of spotify_lists">
+    <h2 class="section-titel">Spotify Results</h2>
+      <p>{{spotify_list.label}}</p>
+      <p>{{spotify_list.name}}</p>
+      <img src="{{spotify_list.images[0].url}}">
+      <ion-list>
+        <ion-item ion-item *ngFor="let spotify_track of spotify_list.tracks.items">
+          <button ion-item icon-add  color="light">
+              <p>{{spotify_track.name}}</p>
+          </button>
+        </ion-item>
+      </ion-list>
+      <p>Add to Playlist?</p>
+    </ion-item>
+  </ion-list>
+</ion-content>
