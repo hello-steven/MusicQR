@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ViewChild } from '@angular/core';
 import { Slides } from 'ionic-angular';
 import { NavController, NavParams } from 'ionic-angular';
-// import { CallSpotify } from '../../providers/call-spotify';
+import { AuthSpotify } from '../../providers/auth-spotify';
 
 // @Component({
 //   templateUrl: 'spotify-details.html',
@@ -22,25 +22,24 @@ import { NavController, NavParams } from 'ionic-angular';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
-  // providers: [CallSpotify],
+  providers: [AuthSpotify],
 })
 export class HomePage {
 
   spotify_results = [];
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public authSpotify: AuthSpotify) {
   // constructor(public navCtrl: NavController, public callSpotify: CallSpotify) {
-    // this.callToSpotify();
+    this.authUserSpotify();
   }
 
   @ViewChild(Slides) slides: Slides;
 
-  // callToSpotify(){
-  //   this.callSpotify.load()
-  //   .then(data => {
-  //     this.spotify_results = data;
-  //     console.log(data);
-  //     this.navCtrl.push(HomeDetailsPage, { spotify_lists: data });
-  //   });
-  // }
+  authUserSpotify(){
+    this.authSpotify.authCall("clientId")
+    .then(data => {
+      this.spotify_results = data;
+      console.log(data);
+    });
+  }
 
 }
