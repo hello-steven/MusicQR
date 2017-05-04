@@ -14,7 +14,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { CallSpotify } from '../providers/call-spotify';
-import { AuthSpotify } from '../providers/auth-spotify';
+import { Spotify } from '../providers/auth-spotify';
 @NgModule({
   declarations: [
     MyApp,
@@ -53,7 +53,7 @@ import { AuthSpotify } from '../providers/auth-spotify';
     SplashScreen,
     StatusBar,
     CallSpotify,
-    AuthSpotify,
+    Spotify,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

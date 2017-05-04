@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ViewChild } from '@angular/core';
 import { Slides } from 'ionic-angular';
 import { NavController, NavParams } from 'ionic-angular';
-import { AuthSpotify } from '../../providers/auth-spotify';
+import { Spotify } from '../../providers/auth-spotify';
 
 // @Component({
 //   templateUrl: 'spotify-details.html',
@@ -22,24 +22,41 @@ import { AuthSpotify } from '../../providers/auth-spotify';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
-  providers: [AuthSpotify],
+  providers: [Spotify],
 })
 export class HomePage {
 
-  spotify_results = [];
-  constructor(public navCtrl: NavController, public authSpotify: AuthSpotify) {
+  oauth_results = [];
+  clientId = 'your-spotify-app-client-id';
+  constructor(public navCtrl: NavController, public spotify: Spotify) {
   // constructor(public navCtrl: NavController, public callSpotify: CallSpotify) {
-    this.authUserSpotify();
+    // this.performLogin();
   }
 
   @ViewChild(Slides) slides: Slides;
 
-  authUserSpotify(){
-    this.authSpotify.authCall("clientId")
-    .then(data => {
-      this.spotify_results = data;
-      console.log(data);
+  performLogin () {
+    $cordovaOauth.spotify(this.clientId, ['user-read-private', 'playlist-read-private']).then(function(result) {
+      window.localStorage.setItem('spotify-token', result.access_token);
+      this.spotify.setAuthToken(result.access_token);
+      this.updateInfo();
+    }, function(error) {
+        console.log("Error -> " + error);
     });
-  }
+  };
+
+  updateInfo () {
+    this.spotify.$get.getCurrentUser().then(function (data) {
+      this.getUserPlaylists(data.id);
+    }, function(error) {
+      this.performLogin();
+    });
+  };
+
+  getUserPlaylists (userid) {
+    this.spotify.$get.getUserPlaylists(userid).then(function (data) {
+      this.playlists = data.items;
+    });
+  };
 
 }
