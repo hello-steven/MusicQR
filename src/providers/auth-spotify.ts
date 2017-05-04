@@ -38,5 +38,6 @@ export class AuthSpotify {
           resolve(this.data);
         });
     });
+  }
 
 }
