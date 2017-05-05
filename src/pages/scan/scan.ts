@@ -26,18 +26,20 @@ import { CallSpotify } from '../../providers/call-spotify';
     <ion-list>
       <ion-item ion-item *ngFor="let spotify_list of spotify_lists">
       <h2 class="section-title Scan-resultUser">{{scannedText}}</h2>
-      <h2 class="section-titel">Spotify Results</h2>
-        <p>{{spotify_list.label}}</p>
-        <p>{{spotify_list.name}}</p>
+      <h2 class="section-title">Spotify Results</h2>
+        <p class="item-label">{{spotify_list.label}}</p>
+        <p class="item-name">{{spotify_list.name}}</p>
         <img src="{{spotify_list.images[0].url}}">
         <ion-list>
           <ion-item ion-item *ngFor="let spotify_track of spotify_list.tracks.items">
-            <button ion-item icon-add  color="light">
-                <p>{{spotify_track.name}}</p>
+            <button class="list-button" ion-button icon-add color="light">
+                <a href="http://open.spotify.com/{{spotify_track.type}}/{{spotify_track.id}}">{{spotify_track.name}}</a>
             </button>
           </ion-item>
         </ion-list>
-        <button ion-button block color="royal">Add to Playlist?</button>
+        <button class="Scan-button" ion-button block color="royal">
+          <a href="http://open.spotify.com/{{spotify_list.type}}/{{spotify_list.id}}">Add to Spotify?</a>
+        </button>
       </ion-item>
     </ion-list>
   </ion-content>
@@ -61,6 +63,11 @@ export class ScanResultsPage {
     // console.log(results);
     // alert(results);
   }
+  openSpotifyApp(clickType, clickId) {
+    window.open("http://open.spotify.com/"+clickType+"/"+clickId);
+    console.log(clickType+", "+clickId);
+    console.log("clicked add to playlist");
+  }
 }
 
 @Component({
@@ -78,7 +85,7 @@ export class ScanPage {
 
   // constructor() {
   constructor(public navCtrl: NavController, public navParams: NavParams, private barcodeScanner: BarcodeScanner, public callSpotify: CallSpotify) {
-    this.callToSpotify("https://api.spotify.com/v1/albums/4uNp9aHx5UeJR69aLpAtvR");
+    // this.callToSpotify("https://api.spotify.com/v1/albums/4uNp9aHx5UeJR69aLpAtvR");
   }
     // constructor(public navCtrl: NavController, public navParams: NavParams) {}
 

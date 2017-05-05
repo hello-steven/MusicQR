@@ -30,4 +30,32 @@ page-scan-result {
     display: flex;
     justify-content: center;
   }
+  .Scan-button {
+    color: #ffffff;
+    background-color:#00a4da;
+  }
+  .Scan-button,
+  .item-ios .item-button {
+    padding: 1em;
+    display: inline-block;
+    color: #fff;
+    height: auto;
+    font-size: inherit;
+    contain: content;
+  }
+  .Scan-button a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0;
+  }
+  .list-button {
+    width: 100%;
+  }
+
+  .section-title {
+    margin-bottom: 1em;
+  }
+  .item-name {
+    margin-bottom: 1em;
+  }
 }
