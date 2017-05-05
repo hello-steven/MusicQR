@@ -9,7 +9,7 @@ import 'rxjs/add/operator/map';
   for more info on providers and Angular 2 DI.
 */
 @Injectable()
-export class Spotify {
+export class GoSpotify {
   data: any;
   // clientId: any;
   settings = {

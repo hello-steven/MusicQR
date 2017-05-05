@@ -28,6 +28,7 @@
     "ionic-angular": "3.0.1",
     "ionic-native": "^3.5.0",
     "ionicons": "3.0.0",
+    "ng2-cordova-oauth": "0.0.8",
     "rxjs": "5.1.1",
     "spotify-sdk": "^1.0.0-beta2",
     "sw-toolbox": "3.4.0",

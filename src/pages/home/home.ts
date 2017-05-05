@@ -2,7 +2,10 @@ import { Component } from '@angular/core';
 import { ViewChild } from '@angular/core';
 import { Slides } from 'ionic-angular';
 import { NavController, NavParams } from 'ionic-angular';
-import { Spotify } from '../../providers/auth-spotify';
+import { GoSpotify } from '../../providers/auth-spotify';
+import {Spotify} from "ng2-cordova-oauth/core";
+import {OauthCordova} from 'ng2-cordova-oauth/platform/cordova'
+import {Oauth} from 'ng2-cordova-oauth/oauth'
 
 // @Component({
 //   templateUrl: 'spotify-details.html',
@@ -22,13 +25,13 @@ import { Spotify } from '../../providers/auth-spotify';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
-  providers: [Spotify],
+  providers: [GoSpotify, Oauth, OauthCordova, Spotify],
 })
 export class HomePage {
 
   oauth_results = [];
   clientId = 'your-spotify-app-client-id';
-  constructor(public navCtrl: NavController, public spotify: Spotify) {
+  constructor(public navCtrl: NavController, public gospotify: GoSpotify, public oauth: Oauth, public oauthCordova: OauthCordova, public spotify: Spotify) {
   // constructor(public navCtrl: NavController, public callSpotify: CallSpotify) {
     // this.performLogin();
   }
@@ -36,9 +39,9 @@ export class HomePage {
   @ViewChild(Slides) slides: Slides;
 
   performLogin () {
-    $cordovaOauth.spotify(this.clientId, ['user-read-private', 'playlist-read-private']).then(function(result) {
+    this.oauthCordova.spotify(this.clientId, ['user-read-private', 'playlist-read-private', 'user-library-private']).then(function(result) {
       window.localStorage.setItem('spotify-token', result.access_token);
-      this.spotify.setAuthToken(result.access_token);
+      this.gospotify.setAuthToken(result.access_token);
       this.updateInfo();
     }, function(error) {
         console.log("Error -> " + error);
@@ -46,15 +49,25 @@ export class HomePage {
   };
 
   updateInfo () {
-    this.spotify.$get.getCurrentUser().then(function (data) {
+    this.gospotify.$get['NgSpotify'].getCurrentUser().then(function (data) {
       this.getUserPlaylists(data.id);
     }, function(error) {
       this.performLogin();
     });
   };
 
+  ionViewDidLoad() {
+    var storedToken = window.localStorage.getItem('spotify-token');
+    if (storedToken !== null) {
+      this.gospotify.setAuthToken(storedToken);
+      this.updateInfo();
+    } else {
+      this.performLogin();
+    }
+  }
+
   getUserPlaylists (userid) {
-    this.spotify.$get.getUserPlaylists(userid).then(function (data) {
+    this.gospotify.$get['NgSpotify'].getUserPlaylists(userid).then(function (data) {
       this.playlists = data.items;
     });
   };

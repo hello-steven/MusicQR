@@ -13,8 +13,11 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
-import { CallSpotify } from '../providers/call-spotify';
-import { Spotify } from '../providers/auth-spotify';
+import { GoSpotify } from '../providers/auth-spotify';
+// import { CallSpotify } from '../providers/call-spotify';
+import { OauthCordova } from 'ng2-cordova-oauth/platform/cordova';
+import { Oauth } from 'ng2-cordova-oauth/oauth';
+import { Spotify } from "ng2-cordova-oauth/core";
 @NgModule({
   declarations: [
     MyApp,
@@ -52,9 +55,13 @@ import { Spotify } from '../providers/auth-spotify';
     BarcodeScanner,
     SplashScreen,
     StatusBar,
-    CallSpotify,
+    // CallSpotify,
+    GoSpotify,
+    OauthCordova,
+    Oauth,
     Spotify,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    {provide: Oauth, useClass: OauthCordova},
   ]
 })
 export class AppModule {}
