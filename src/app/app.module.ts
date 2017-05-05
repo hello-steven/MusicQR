@@ -59,7 +59,7 @@ import { Spotify } from "ng2-cordova-oauth/core";
     GoSpotify,
     OauthCordova,
     Oauth,
-    Spotify,
+    // Spotify,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     {provide: Oauth, useClass: OauthCordova},
   ]
