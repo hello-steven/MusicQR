@@ -17,7 +17,6 @@ import { CallSpotify } from '../../providers/call-spotify';
 export class HomePage {
 
   oauth_results = [];
-  clientId = '29cc8ed77d9e4d71b72c95a13323c3f3';
   // constructor(public navCtrl: NavController, public platform: Platform, public oauth: Oauth, public oauthCordova: OauthCordova, public spotify: Spotify, public gospotify: GoSpotify) {
   constructor(public navCtrl: NavController, public callSpotify: CallSpotify) {
     // this.performLogin();

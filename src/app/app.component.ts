@@ -9,6 +9,7 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 // import { Oauth } from 'ng2-cordova-oauth/oauth';
 // import { Spotify } from "ng2-cordova-oauth/core";
 import { CallSpotify } from '../providers/call-spotify';
+import { AngularFireDatabase, FirebaseListObservable } from "angularfire2/database";
 
 import { TabsPage } from '../pages/tabs/tabs';
 
@@ -18,9 +19,9 @@ import { TabsPage } from '../pages/tabs/tabs';
 })
 export class MyApp {
   rootPage = TabsPage;
-
+  accounts:FirebaseListObservable<any[]>
   // constructor(platform: Platform, StatusBar: StatusBar, Splashscreen: SplashScreen, BarcodeScanner: BarcodeScanner, Http: Http, public oauth: Oauth, public oauthCordova: OauthCordova, public spotify: Spotify, public gospotify: GoSpotify) {
-    constructor(platform: Platform, BarcodeScanner: BarcodeScanner, Http: Http, public callSpotify: CallSpotify) {
+    constructor(platform: Platform, BarcodeScanner: BarcodeScanner, Http: Http, public callSpotify: CallSpotify, public db: AngularFireDatabase) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.

@@ -17,6 +17,15 @@ import { TabsPage } from '../pages/tabs/tabs';
 // import { Spotify } from "ng2-cordova-oauth/core";
 // import { GoSpotify } from '../providers/auth-spotify';
 import { CallSpotify } from '../providers/call-spotify';
+import { AngularFireModule } from "angularfire2";
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+export const firebaseConfig = {
+  apiKey: 'AIzaSyC7Yre-Qk_i4jPwBKflauVz34DS10t-PjE',
+  authDomain: 'mellidy-app.firebaseapp.com',
+  databaseURL: 'https://mellidy-app.firebaseio.com/',
+  storageBucket: 'mellidy-app.appspot.com',
+  messagingSenderId: '1058063288965'
+};
 @NgModule({
   declarations: [
     MyApp,
@@ -31,7 +40,8 @@ import { CallSpotify } from '../providers/call-spotify';
   imports: [
     BrowserModule,
     HttpModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -54,6 +64,7 @@ import { CallSpotify } from '../providers/call-spotify';
     // OauthCordova,
     // CallSpotify,
     CallSpotify,
+    AngularFireDatabase,
 
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     // {provide: Oauth, useClass: OauthCordova}

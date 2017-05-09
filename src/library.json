@@ -1,0 +1,351 @@
+[
+  {
+    "user_name" : {
+      "admin" : {
+        "creds" : "5p0t1fy",
+        "spotify_data" : {
+          "qr_tracker" : {
+            "QR_34ovhoqwe" : {
+              "qr_count" : 1,
+              "spotify_results" : {
+                "album_type" : "album",
+                "artists" : [ {
+                  "external_urls" : {
+                    "spotify" : "https://open.spotify.com/artist/3jNoP069MtTeU5wWbLywwU"
+                  },
+                  "href" : "https://api.spotify.com/v1/artists/3jNoP069MtTeU5wWbLywwU",
+                  "id" : "3jNoP069MtTeU5wWbLywwU",
+                  "name" : "The Millenium",
+                  "type" : "artist",
+                  "uri" : "spotify:artist:3jNoP069MtTeU5wWbLywwU"
+                } ],
+                "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IS", "IT", "JP", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "SE", "SG", "SK", "SV", "TR", "TW", "US", "UY" ],
+                "copyrights" : [ {
+                  "text" : "2017 The Millenium",
+                  "type" : "C"
+                }, {
+                  "text" : "2017 The Millenium",
+                  "type" : "P"
+                } ],
+                "external_ids" : {
+                  "upc" : "859719594726"
+                },
+                "external_urls" : {
+                  "spotify" : "https://open.spotify.com/album/4uNp9aHx5UeJR69aLpAtvR"
+                },
+                "genres" : [ ],
+                "href" : "https://api.spotify.com/v1/albums/4uNp9aHx5UeJR69aLpAtvR",
+                "id" : "4uNp9aHx5UeJR69aLpAtvR",
+                "images" : [ {
+                  "height" : 640,
+                  "url" : "https://i.scdn.co/image/40cf0e6d762139d8fbc00924f9833b82d9f495d1",
+                  "width" : 640
+                }, {
+                  "height" : 300,
+                  "url" : "https://i.scdn.co/image/71970def7113b983e51171fdd34d2f29ac928d1c",
+                  "width" : 300
+                }, {
+                  "height" : 64,
+                  "url" : "https://i.scdn.co/image/3ad00001ae2c43b748e9cf97d01d11f358eb0990",
+                  "width" : 64
+                } ],
+                "label" : "The Millenium",
+                "name" : "But Do We Ever Ask Ourselves?",
+                "popularity" : 26,
+                "release_date" : "2017-03-10",
+                "release_date_precision" : "day",
+                "tracks" : {
+                  "href" : "https://api.spotify.com/v1/albums/4uNp9aHx5UeJR69aLpAtvR/tracks?offset=0&limit=50",
+                  "items" : [ {
+                    "artists" : [ {
+                      "external_urls" : {
+                        "spotify" : "https://open.spotify.com/artist/3jNoP069MtTeU5wWbLywwU"
+                      },
+                      "href" : "https://api.spotify.com/v1/artists/3jNoP069MtTeU5wWbLywwU",
+                      "id" : "3jNoP069MtTeU5wWbLywwU",
+                      "name" : "The Millenium",
+                      "type" : "artist",
+                      "uri" : "spotify:artist:3jNoP069MtTeU5wWbLywwU"
+                    } ],
+                    "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IS", "IT", "JP", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "SE", "SG", "SK", "SV", "TR", "TW", "US", "UY" ],
+                    "disc_number" : 1,
+                    "duration_ms" : 198842,
+                    "explicit" : false,
+                    "external_urls" : {
+                      "spotify" : "https://open.spotify.com/track/5iWHrMMcuvGnuPMZkqKkdO"
+                    },
+                    "href" : "https://api.spotify.com/v1/tracks/5iWHrMMcuvGnuPMZkqKkdO",
+                    "id" : "5iWHrMMcuvGnuPMZkqKkdO",
+                    "name" : "Wild Again",
+                    "preview_url" : "https://p.scdn.co/mp3-preview/a11a281faf44a37d8abc5a277b7b40d0ac661d86?cid=null",
+                    "track_number" : 1,
+                    "type" : "track",
+                    "uri" : "spotify:track:5iWHrMMcuvGnuPMZkqKkdO"
+                  }, {
+                    "artists" : [ {
+                      "external_urls" : {
+                        "spotify" : "https://open.spotify.com/artist/3jNoP069MtTeU5wWbLywwU"
+                      },
+                      "href" : "https://api.spotify.com/v1/artists/3jNoP069MtTeU5wWbLywwU",
+                      "id" : "3jNoP069MtTeU5wWbLywwU",
+                      "name" : "The Millenium",
+                      "type" : "artist",
+                      "uri" : "spotify:artist:3jNoP069MtTeU5wWbLywwU"
+                    } ],
+                    "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IS", "IT", "JP", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "SE", "SG", "SK", "SV", "TR", "TW", "US", "UY" ],
+                    "disc_number" : 1,
+                    "duration_ms" : 178548,
+                    "explicit" : false,
+                    "external_urls" : {
+                      "spotify" : "https://open.spotify.com/track/5OGolYsqyRi6TOGHnpPjAf"
+                    },
+                    "href" : "https://api.spotify.com/v1/tracks/5OGolYsqyRi6TOGHnpPjAf",
+                    "id" : "5OGolYsqyRi6TOGHnpPjAf",
+                    "name" : "Midnight Bones",
+                    "preview_url" : "https://p.scdn.co/mp3-preview/1b3c30ae2195716830dd26e12b91a25bd59b27c9?cid=null",
+                    "track_number" : 2,
+                    "type" : "track",
+                    "uri" : "spotify:track:5OGolYsqyRi6TOGHnpPjAf"
+                  }, {
+                    "artists" : [ {
+                      "external_urls" : {
+                        "spotify" : "https://open.spotify.com/artist/3jNoP069MtTeU5wWbLywwU"
+                      },
+                      "href" : "https://api.spotify.com/v1/artists/3jNoP069MtTeU5wWbLywwU",
+                      "id" : "3jNoP069MtTeU5wWbLywwU",
+                      "name" : "The Millenium",
+                      "type" : "artist",
+                      "uri" : "spotify:artist:3jNoP069MtTeU5wWbLywwU"
+                    } ],
+                    "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IS", "IT", "JP", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "SE", "SG", "SK", "SV", "TR", "TW", "US", "UY" ],
+                    "disc_number" : 1,
+                    "duration_ms" : 180582,
+                    "explicit" : false,
+                    "external_urls" : {
+                      "spotify" : "https://open.spotify.com/track/4Ur59LAAENjIv7PqAyuHRo"
+                    },
+                    "href" : "https://api.spotify.com/v1/tracks/4Ur59LAAENjIv7PqAyuHRo",
+                    "id" : "4Ur59LAAENjIv7PqAyuHRo",
+                    "name" : "Figure It Out",
+                    "preview_url" : "https://p.scdn.co/mp3-preview/77e8603273636b05cd17dc00664ec8fee93668ea?cid=null",
+                    "track_number" : 3,
+                    "type" : "track",
+                    "uri" : "spotify:track:4Ur59LAAENjIv7PqAyuHRo"
+                  }, {
+                    "artists" : [ {
+                      "external_urls" : {
+                        "spotify" : "https://open.spotify.com/artist/3jNoP069MtTeU5wWbLywwU"
+                      },
+                      "href" : "https://api.spotify.com/v1/artists/3jNoP069MtTeU5wWbLywwU",
+                      "id" : "3jNoP069MtTeU5wWbLywwU",
+                      "name" : "The Millenium",
+                      "type" : "artist",
+                      "uri" : "spotify:artist:3jNoP069MtTeU5wWbLywwU"
+                    } ],
+                    "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IS", "IT", "JP", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "SE", "SG", "SK", "SV", "TR", "TW", "US", "UY" ],
+                    "disc_number" : 1,
+                    "duration_ms" : 202000,
+                    "explicit" : false,
+                    "external_urls" : {
+                      "spotify" : "https://open.spotify.com/track/1FSvk6VpyJqeocEZMNchfI"
+                    },
+                    "href" : "https://api.spotify.com/v1/tracks/1FSvk6VpyJqeocEZMNchfI",
+                    "id" : "1FSvk6VpyJqeocEZMNchfI",
+                    "name" : "Interstates",
+                    "preview_url" : "https://p.scdn.co/mp3-preview/f3aa598ac3b86ca43ad83ffd037b1421515d94ec?cid=null",
+                    "track_number" : 4,
+                    "type" : "track",
+                    "uri" : "spotify:track:1FSvk6VpyJqeocEZMNchfI"
+                  }, {
+                    "artists" : [ {
+                      "external_urls" : {
+                        "spotify" : "https://open.spotify.com/artist/3jNoP069MtTeU5wWbLywwU"
+                      },
+                      "href" : "https://api.spotify.com/v1/artists/3jNoP069MtTeU5wWbLywwU",
+                      "id" : "3jNoP069MtTeU5wWbLywwU",
+                      "name" : "The Millenium",
+                      "type" : "artist",
+                      "uri" : "spotify:artist:3jNoP069MtTeU5wWbLywwU"
+                    } ],
+                    "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IS", "IT", "JP", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "SE", "SG", "SK", "SV", "TR", "TW", "US", "UY" ],
+                    "disc_number" : 1,
+                    "duration_ms" : 198556,
+                    "explicit" : false,
+                    "external_urls" : {
+                      "spotify" : "https://open.spotify.com/track/5STXm77y5wYXYU6eLDMy0e"
+                    },
+                    "href" : "https://api.spotify.com/v1/tracks/5STXm77y5wYXYU6eLDMy0e",
+                    "id" : "5STXm77y5wYXYU6eLDMy0e",
+                    "name" : "Still in the Running",
+                    "preview_url" : "https://p.scdn.co/mp3-preview/8fc3986ea595bb43742c855008765d67ab60d173?cid=null",
+                    "track_number" : 5,
+                    "type" : "track",
+                    "uri" : "spotify:track:5STXm77y5wYXYU6eLDMy0e"
+                  }, {
+                    "artists" : [ {
+                      "external_urls" : {
+                        "spotify" : "https://open.spotify.com/artist/3jNoP069MtTeU5wWbLywwU"
+                      },
+                      "href" : "https://api.spotify.com/v1/artists/3jNoP069MtTeU5wWbLywwU",
+                      "id" : "3jNoP069MtTeU5wWbLywwU",
+                      "name" : "The Millenium",
+                      "type" : "artist",
+                      "uri" : "spotify:artist:3jNoP069MtTeU5wWbLywwU"
+                    } ],
+                    "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IS", "IT", "JP", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "SE", "SG", "SK", "SV", "TR", "TW", "US", "UY" ],
+                    "disc_number" : 1,
+                    "duration_ms" : 193090,
+                    "explicit" : false,
+                    "external_urls" : {
+                      "spotify" : "https://open.spotify.com/track/4ghbJKdpWsSBYvO4VNZANI"
+                    },
+                    "href" : "https://api.spotify.com/v1/tracks/4ghbJKdpWsSBYvO4VNZANI",
+                    "id" : "4ghbJKdpWsSBYvO4VNZANI",
+                    "name" : "Why Don't You",
+                    "preview_url" : "https://p.scdn.co/mp3-preview/db9e220dd9762d2b1da017f4adc6812e943d79d0?cid=null",
+                    "track_number" : 6,
+                    "type" : "track",
+                    "uri" : "spotify:track:4ghbJKdpWsSBYvO4VNZANI"
+                  }, {
+                    "artists" : [ {
+                      "external_urls" : {
+                        "spotify" : "https://open.spotify.com/artist/3jNoP069MtTeU5wWbLywwU"
+                      },
+                      "href" : "https://api.spotify.com/v1/artists/3jNoP069MtTeU5wWbLywwU",
+                      "id" : "3jNoP069MtTeU5wWbLywwU",
+                      "name" : "The Millenium",
+                      "type" : "artist",
+                      "uri" : "spotify:artist:3jNoP069MtTeU5wWbLywwU"
+                    } ],
+                    "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IS", "IT", "JP", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "SE", "SG", "SK", "SV", "TR", "TW", "US", "UY" ],
+                    "disc_number" : 1,
+                    "duration_ms" : 210000,
+                    "explicit" : false,
+                    "external_urls" : {
+                      "spotify" : "https://open.spotify.com/track/0yNB2Kz6hUJL1ZjswF8cGh"
+                    },
+                    "href" : "https://api.spotify.com/v1/tracks/0yNB2Kz6hUJL1ZjswF8cGh",
+                    "id" : "0yNB2Kz6hUJL1ZjswF8cGh",
+                    "name" : "Stay",
+                    "preview_url" : "https://p.scdn.co/mp3-preview/0a404ac442bbe49c282143ad93a8f06c950d39f9?cid=null",
+                    "track_number" : 7,
+                    "type" : "track",
+                    "uri" : "spotify:track:0yNB2Kz6hUJL1ZjswF8cGh"
+                  }, {
+                    "artists" : [ {
+                      "external_urls" : {
+                        "spotify" : "https://open.spotify.com/artist/3jNoP069MtTeU5wWbLywwU"
+                      },
+                      "href" : "https://api.spotify.com/v1/artists/3jNoP069MtTeU5wWbLywwU",
+                      "id" : "3jNoP069MtTeU5wWbLywwU",
+                      "name" : "The Millenium",
+                      "type" : "artist",
+                      "uri" : "spotify:artist:3jNoP069MtTeU5wWbLywwU"
+                    } ],
+                    "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IS", "IT", "JP", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "SE", "SG", "SK", "SV", "TR", "TW", "US", "UY" ],
+                    "disc_number" : 1,
+                    "duration_ms" : 223874,
+                    "explicit" : false,
+                    "external_urls" : {
+                      "spotify" : "https://open.spotify.com/track/6asCjNhhnujAbI7x7sytnk"
+                    },
+                    "href" : "https://api.spotify.com/v1/tracks/6asCjNhhnujAbI7x7sytnk",
+                    "id" : "6asCjNhhnujAbI7x7sytnk",
+                    "name" : "What's the Catch",
+                    "preview_url" : "https://p.scdn.co/mp3-preview/d86babcc418806916f50c716a8027732da43da62?cid=null",
+                    "track_number" : 8,
+                    "type" : "track",
+                    "uri" : "spotify:track:6asCjNhhnujAbI7x7sytnk"
+                  }, {
+                    "artists" : [ {
+                      "external_urls" : {
+                        "spotify" : "https://open.spotify.com/artist/3jNoP069MtTeU5wWbLywwU"
+                      },
+                      "href" : "https://api.spotify.com/v1/artists/3jNoP069MtTeU5wWbLywwU",
+                      "id" : "3jNoP069MtTeU5wWbLywwU",
+                      "name" : "The Millenium",
+                      "type" : "artist",
+                      "uri" : "spotify:artist:3jNoP069MtTeU5wWbLywwU"
+                    } ],
+                    "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IS", "IT", "JP", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "SE", "SG", "SK", "SV", "TR", "TW", "US", "UY" ],
+                    "disc_number" : 1,
+                    "duration_ms" : 230000,
+                    "explicit" : false,
+                    "external_urls" : {
+                      "spotify" : "https://open.spotify.com/track/61Ioj9f3oiGkrvuSrW079j"
+                    },
+                    "href" : "https://api.spotify.com/v1/tracks/61Ioj9f3oiGkrvuSrW079j",
+                    "id" : "61Ioj9f3oiGkrvuSrW079j",
+                    "name" : "Rx",
+                    "preview_url" : "https://p.scdn.co/mp3-preview/599e5fc552c8308514df7a4b6f64730e63607895?cid=null",
+                    "track_number" : 9,
+                    "type" : "track",
+                    "uri" : "spotify:track:61Ioj9f3oiGkrvuSrW079j"
+                  }, {
+                    "artists" : [ {
+                      "external_urls" : {
+                        "spotify" : "https://open.spotify.com/artist/3jNoP069MtTeU5wWbLywwU"
+                      },
+                      "href" : "https://api.spotify.com/v1/artists/3jNoP069MtTeU5wWbLywwU",
+                      "id" : "3jNoP069MtTeU5wWbLywwU",
+                      "name" : "The Millenium",
+                      "type" : "artist",
+                      "uri" : "spotify:artist:3jNoP069MtTeU5wWbLywwU"
+                    } ],
+                    "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IS", "IT", "JP", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "SE", "SG", "SK", "SV", "TR", "TW", "US", "UY" ],
+                    "disc_number" : 1,
+                    "duration_ms" : 260000,
+                    "explicit" : false,
+                    "external_urls" : {
+                      "spotify" : "https://open.spotify.com/track/0M2rRII2wmC3S960pBbKe9"
+                    },
+                    "href" : "https://api.spotify.com/v1/tracks/0M2rRII2wmC3S960pBbKe9",
+                    "id" : "0M2rRII2wmC3S960pBbKe9",
+                    "name" : "Fired Lines",
+                    "preview_url" : "https://p.scdn.co/mp3-preview/b293deffcf2a7004cc91473db7a8ba2a2bfb42ea?cid=null",
+                    "track_number" : 10,
+                    "type" : "track",
+                    "uri" : "spotify:track:0M2rRII2wmC3S960pBbKe9"
+                  }, {
+                    "artists" : [ {
+                      "external_urls" : {
+                        "spotify" : "https://open.spotify.com/artist/3jNoP069MtTeU5wWbLywwU"
+                      },
+                      "href" : "https://api.spotify.com/v1/artists/3jNoP069MtTeU5wWbLywwU",
+                      "id" : "3jNoP069MtTeU5wWbLywwU",
+                      "name" : "The Millenium",
+                      "type" : "artist",
+                      "uri" : "spotify:artist:3jNoP069MtTeU5wWbLywwU"
+                    } ],
+                    "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IS", "IT", "JP", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "SE", "SG", "SK", "SV", "TR", "TW", "US", "UY" ],
+                    "disc_number" : 1,
+                    "duration_ms" : 275000,
+                    "explicit" : false,
+                    "external_urls" : {
+                      "spotify" : "https://open.spotify.com/track/7KvnHXUH6Lhh96IuULlBZs"
+                    },
+                    "href" : "https://api.spotify.com/v1/tracks/7KvnHXUH6Lhh96IuULlBZs",
+                    "id" : "7KvnHXUH6Lhh96IuULlBZs",
+                    "name" : "Of All Things",
+                    "preview_url" : "https://p.scdn.co/mp3-preview/5c2153155a1f14490ce16f87844428202be911ef?cid=null",
+                    "track_number" : 11,
+                    "type" : "track",
+                    "uri" : "spotify:track:7KvnHXUH6Lhh96IuULlBZs"
+                  } ],
+                  "limit" : 50,
+                  "next" : null,
+                  "offset" : 0,
+                  "previous" : null,
+                  "total" : 11
+                },
+                "type" : "album",
+                "uri" : "spotify:album:4uNp9aHx5UeJR69aLpAtvR"
+              },
+              "timestamp" : "2017-05-07T03:39:18.819Z"
+            }
+          }
+        }
+      }
+    }
+  }
+]

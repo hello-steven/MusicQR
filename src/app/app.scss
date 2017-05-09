@@ -65,13 +65,13 @@ ion-app.ios [padding], ion-app.ios [padding] .scroll-content {
 // qr scanner
 page-scan .Scan-button {
     background-color: #0e6f8e;
-    width: auto;
+    width: 100%;
     margin: 0 auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    right: 0;
-    transform: translate3d(-50%, -50%, 0);
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // right: 0;
+    // transform: translate3d(-50%, -50%, 0);
     min-width: 100px;
   }
 

@@ -85,7 +85,7 @@ export class ScanPage {
 
   // constructor() {
   constructor(public navCtrl: NavController, public navParams: NavParams, private barcodeScanner: BarcodeScanner, public callSpotify: CallSpotify) {
-    // this.callToSpotify("https://api.spotify.com/v1/albums/4uNp9aHx5UeJR69aLpAtvR");
+    // this.callToSpotify({"url":"https://api.spotify.com/v1/albums/4wuYQ9hyF1EGmrtjMpgpE9", "qr_tracker":"QR_88jhkhoqwe"});
   }
     // constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
@@ -103,24 +103,29 @@ export class ScanPage {
 
       this.barcodeScanner.scan().then((barcodeData) => {
         if (barcodeData.cancelled) {
-          alert("User cancelled the action!");
+          // alert("User cancelled the action!");
           this.buttonText = "Scan";
           this.loading = false;
           return false;
         }
         // alert("Scanned successfully!");
-        // alert(barcodeData);
-        this.goToResult(barcodeData);
+        // alert(barcodeData.text);
+        this.goToResult(barcodeData.text);
       }, (err) => {
         alert(err);
       });
     }
 
-    private goToResult(barcodeData) {
-      this.callSpotify.load(barcodeData.text)
+    goToResult(barcodeData) {
+      var barcode_obj = JSON.parse(barcodeData);
+      // barcodeData.json();
+      // alert("ready to open callSpotify");
+      // alert("url: "+barcode_obj.url+", qr_tracker: "+barcode_obj.qr_tracker);
+      this.callSpotify.load(barcode_obj.url, barcode_obj.qr_tracker)
       .then(data => {
         this.spotify_results = data;
         // console.log(data);
+        // alert("got data back about to pass to new view");
         this.navCtrl.push(ScanResultsPage, {
           scannedText: barcodeData.text,
           spotify_lists: data
@@ -132,8 +137,9 @@ export class ScanPage {
       // });
     }
 
-    callToSpotify(url){
-      this.callSpotify.load(url)
+    callToSpotify(text_obj){
+      // alert("callToSpotify text_obj");
+      this.callSpotify.load(text_obj.url, text_obj.qr_tracker)
       .then(data => {
         this.spotify_results = data;
         // console.log(data);

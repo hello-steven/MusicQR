@@ -1,6 +1,16 @@
 page-about {
 
 }
+
+page-library-details {
+  .item-ios {
+    background-color: color($colors, light);
+  }
+  .list-item {
+    color: #fff;
+    text-decoration: none;
+  }
+}
 // .item-ios {
 //   background-color: color($colors, light);
 // }
