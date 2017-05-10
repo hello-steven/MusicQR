@@ -27,7 +27,13 @@ import { AngularFireDatabase, FirebaseListObservable } from "angularfire2/databa
         <ion-searchbar (ionInput)="getItems($event)">
         </ion-searchbar>
         <ion-item *ngFor="let item of items">
+          <button [attr.data-show]="item.type" ion-button round class="list-preview" (click)="togglePlay(item)">
+            <ion-icon [name]="item.icon_name"></ion-icon>
+          </button>
           <a class="list-item" href="http://open.spotify.com/{{item.type}}/{{item.id}}">{{item.name}}</a>
+          <a [attr.data-show]="item.type" class="list-icon" href="http://open.spotify.com/{{item.type}}/{{item.id}}">
+            <ion-icon icon-right name="add"></ion-icon>
+          </a>
         </ion-item>
       </ion-list>
 
@@ -41,11 +47,17 @@ export class LibraryDetailsPage {
   spotify_lists = [];
   details : any;
   items = [];
+  audio = new Audio();
   db_item: FirebaseListObservable<any[]>;
   constructor(params: NavParams, public callSpotify: CallSpotify, public db: AngularFireDatabase) {
     this.list = params.data.list;
     var sort_title = this.list["title"].toLowerCase();
     console.log(sort_title);
+
+    //pause audio if it is playing
+    if (this.audio.src) {
+      this.audio.pause();
+    }
 
     // console.log(this.details);
     // alert(this.list.title);
@@ -56,6 +68,10 @@ export class LibraryDetailsPage {
         snapshots.forEach(snapshot => {
           if (sort_title == 'songs') {
             snapshot.spotify_results.tracks.items.forEach(track => {
+
+              //add icon and playing status to each track object then push each track to main list
+              track["icon_name"] = "play";
+              track["songPlay"] = false;
               this.spotify_lists.push(track);
               console.log(track);
             });
@@ -85,6 +101,29 @@ export class LibraryDetailsPage {
   }
   initializeItems() {
     this.items = this.spotify_lists;
+  }
+  togglePlay(iconName) {
+    console.log("togglePlay::"+iconName.songPlay+" : "+iconName.name);
+    if (!iconName.songPlay) {
+      //change all tracks back to initial state
+      this.spotify_lists.forEach(track => {
+        track.icon_name = "play";
+        track.songPlay = false;
+      });
+
+      //load and start playing this track
+      this.audio.src = iconName.preview_url;
+      this.audio.play();
+      iconName.icon_name = "pause";
+      iconName.songPlay = true;
+    } else {
+      //pause this track
+      if (this.audio.src) {
+        this.audio.pause();
+        iconName.icon_name = "play";
+        iconName.songPlay = false;
+      }
+    }
   }
 
   getItems(ev: any) {

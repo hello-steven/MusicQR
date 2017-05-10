@@ -23,25 +23,27 @@ import { CallSpotify } from '../../providers/call-spotify';
   </ion-header>
 
   <ion-content padding>
+    <ion-item ion-item>
+    <h2 class="section-title">Spotify Results</h2>
+      <a href="http://open.spotify.com/{{spotify_lists.type}}/{{spotify_lists.id}}"><img src="{{spotify_lists.images[1].url}}"></a>
+      <p class="item-details">{{spotify_lists.artists[0].name}} - {{spotify_lists.name}}</p>
+    </ion-item>
     <ion-list>
-      <ion-item ion-item *ngFor="let spotify_list of spotify_lists">
-      <h2 class="section-title Scan-resultUser">{{scannedText}}</h2>
-      <h2 class="section-title">Spotify Results</h2>
-        <p class="item-label">{{spotify_list.label}}</p>
-        <p class="item-name">{{spotify_list.name}}</p>
-        <img src="{{spotify_list.images[0].url}}">
-        <ion-list>
-          <ion-item ion-item *ngFor="let spotify_track of spotify_list.tracks.items">
-            <button class="list-button" ion-button icon-add color="light">
-                <a href="http://open.spotify.com/{{spotify_track.type}}/{{spotify_track.id}}">{{spotify_track.name}}</a>
-            </button>
-          </ion-item>
-        </ion-list>
-        <button class="Scan-button" ion-button block color="royal">
-          <a href="http://open.spotify.com/{{spotify_list.type}}/{{spotify_list.id}}">Add to Spotify?</a>
+      <ion-item ion-item *ngFor="let spotify_track of spotify_tracks">
+        <button ion-button round class="list-preview" (click)="togglePlay(spotify_track)">
+          <ion-icon [name]="spotify_track.icon_name"></ion-icon>
         </button>
+        <a class="list-item" href="http://open.spotify.com/{{spotify_track.type}}/{{spotify_track.id}}">
+          {{spotify_track.track_number}}. {{spotify_track.name}}
+        </a>
+        <a class="list-icon" href="http://open.spotify.com/{{spotify_track.type}}/{{spotify_track.id}}">
+          <ion-icon icon-right name="add"></ion-icon>
+        </a>
       </ion-item>
     </ion-list>
+    <button class="Scan-button" ion-button block color="royal">
+      <a href="http://open.spotify.com/{{spotify_lists.type}}/{{spotify_lists.id}}">Open {{spotify_lists.type}} in Spotify?</a>
+    </button>
   </ion-content>
   `,
 })
@@ -50,14 +52,53 @@ export class ScanResultsPage {
 
   public scannedText: string;
   spotify_lists = [];
-
+  spotify_tracks = [];
+  icon_names: any;
+  audio = new Audio();
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.spotify_lists.push(navParams.data.spotify_lists);
+    this.spotify_lists = navParams.data.spotify_lists;
     console.log(this.spotify_lists);
+
+    //pause audio if it is playing
+    if (this.audio.src) {
+      this.audio.pause();
+    }
+
+    this.spotify_tracks = this.spotify_lists["tracks"].items;
+
+    //add icon and playing status to each track object
+    this.spotify_tracks.forEach(track => {
+      track["icon_name"] = "play";
+      track["songPlay"] = false;
+    });
+    console.log(this.spotify_tracks);
   }
 
   ionViewDidLoad() {
     this.scannedText = this.navParams.get("scannedText");
+  }
+  togglePlay(iconName) {
+    console.log("togglePlay::"+iconName.songPlay+" : "+iconName.name);
+    if (!iconName.songPlay) {
+      //change all tracks back to initial state
+      this.spotify_tracks.forEach(track => {
+        track.icon_name = "play";
+        track.songPlay = false;
+      });
+
+      //load and start playing this track
+      this.audio.src = iconName.preview_url;
+      this.audio.play();
+      iconName.icon_name = "pause";
+      iconName.songPlay = true;
+    } else {
+      //pause this track
+      if (this.audio.src) {
+        this.audio.pause();
+        iconName.icon_name = "play";
+        iconName.songPlay = false;
+      }
+    }
   }
   openResultsPage(results) {
     // console.log(results);
@@ -82,10 +123,16 @@ export class ScanPage {
   private eventId: number;
   public eventTitle: string;
   spotify_results = [];
+  audio = new Audio();
 
   // constructor() {
   constructor(public navCtrl: NavController, public navParams: NavParams, private barcodeScanner: BarcodeScanner, public callSpotify: CallSpotify) {
     // this.callToSpotify({"url":"https://api.spotify.com/v1/albums/4wuYQ9hyF1EGmrtjMpgpE9", "qr_tracker":"QR_88jhkhoqwe"});
+
+    //pause audio if it is playing
+    if (this.audio.src) {
+      this.audio.pause();
+    }
   }
     // constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
@@ -124,7 +171,7 @@ export class ScanPage {
       this.callSpotify.load(barcode_obj.url, barcode_obj.qr_tracker)
       .then(data => {
         this.spotify_results = data;
-        // console.log(data);
+        console.log(data);
         // alert("got data back about to pass to new view");
         this.navCtrl.push(ScanResultsPage, {
           scannedText: barcodeData.text,
@@ -142,7 +189,7 @@ export class ScanPage {
       this.callSpotify.load(text_obj.url, text_obj.qr_tracker)
       .then(data => {
         this.spotify_results = data;
-        // console.log(data);
+        console.log(data);
         this.navCtrl.push(ScanResultsPage, { spotify_lists: data });
       });
     }

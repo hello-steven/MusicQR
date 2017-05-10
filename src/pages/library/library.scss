@@ -10,6 +10,35 @@ page-library-details {
     color: #fff;
     text-decoration: none;
   }
+  [data-show] {
+    display: none;
+  }
+  [data-show="track"] {
+    display: inline-block;
+  }
+
+  .list-item {
+    color: #fff;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    width: 200px;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+  }
+  .item-ios button.list-preview.item-button {
+    background-color: color($colors, bright);
+    // padding: 1em;
+    padding: 0.25em 0.53em;
+    margin-right: .5em;
+  }
+  .list-icon {
+    float: right;
+    color: color($colors, bright);
+  }
+  .list-icon .icon {
+      color: color($colors, bright);
+  }
 }
 // .item-ios {
 //   background-color: color($colors, light);

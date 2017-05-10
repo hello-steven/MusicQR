@@ -15,6 +15,7 @@ page-scan {
   .Scan-button {
     color: #ffffff;
     background-color:#00a4da;
+    width: calc(100% - 24px);
   }
 }
 page-scan-result {
@@ -38,6 +39,8 @@ page-scan-result {
   .Scan-button {
     color: #ffffff;
     background-color:#00a4da;
+    width: calc(100% - 24px);
+    margin: 0 12px 2em;
   }
   .Scan-button,
   .item-ios .item-button {
@@ -55,12 +58,46 @@ page-scan-result {
   }
   .list-button {
     width: 100%;
+    color: #fff;
+  }
+
+  .item-ios {
+    background-color: color($colors, light);
+  }
+  .list-item button.list-button {
+    color: #fff;
+    text-decoration: none;
   }
 
   .section-title {
-    margin-bottom: 1em;
+    margin: 1em auto 2em;
   }
-  .item-name {
-    margin-bottom: 1em;
+  .item-details {
+    text-transform: capitalize;
+    color: color($colors, bright);
+    margin: 1em auto;
+    text-align: center;
+  }
+  .list-item {
+    color: #fff;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    width: 200px;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+  }
+  .item-ios button.list-preview.item-button {
+    background-color: color($colors, bright);
+    // padding: 1em;
+    padding: 0.25em 0.53em;
+    margin-right: .5em;
+  }
+  .list-icon {
+    float: right;
+    color: color($colors, bright);
+  }
+  .list-icon .icon {
+      color: color($colors, bright);
   }
 }
